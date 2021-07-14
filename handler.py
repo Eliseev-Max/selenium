@@ -10,8 +10,6 @@ def element_existence(driver, url, tuple_By_element):
         driver.find_element(*tuple_By_element)
     except NoSuchElementException as no_elem:
         raise AssertionError(no_elem, "Данный селектор не обнаружен")
-    except Exception as err:
-        raise AssertionError(err)
 
 
 def wait_title(driver, url, title, click = False, timeout=3):
